@@ -9,22 +9,38 @@ function round(playerSelection,computerSelection){
     playerSelection= playerSelection.toLowerCase();
     computerSelection= computerSelection.toLowerCase();
     if(playerSelection == computerSelection){
-        return "Draw";
+        return 0;
     }
     else if(playerSelection=="rock" && computerSelection == "paper"){
-        return "You lose!! Rock is beaten by Paper";
+        return -1;
     }
     else if(playerSelection == "scissor" && computerSelection == "rock"){
-        return "You lose!! Scissor is beaten by Rock";
+        return -1;
     }
     else if(playerSelection == "paper" && computerSelection == "scissor"){
-        return "You lose!!! Paper is beaten by scissor";
+        return -1;
     }
     else{
-        return "You win!!! Hurray!!!";
+        return 1;
     }
 }
 
 function game(){
+    let playerScore=0;let computerScore=0;
+    for(var i=0;i<5;i++){
+        player=prompt("Enter your choice");
+        computer=computerPlay();
+        console.log(`Play is ${player} vs computer's ${computer}`);
+        playerScore+=round(player,computer);
+        computerScore-=round(player,computer);
+    }
+    console.log(`Your score is ${playerScore}`);
+    if(playerScore>computerScore){
+        console.log("You win");
+    }
+    else{
+        console.log("Too bad");
+    }
     
 }
+game();
