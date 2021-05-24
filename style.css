@@ -1,0 +1,71 @@
+#playButton{
+    
+    position: relative;
+    top: 400px;
+    left: 900px;
+    width: 100px;
+    height: 40px;
+    background-color: thistle;
+}
+#playButton:hover{
+    color: chocolate;
+    background-color:lightblue;
+    transform: scale(1.1);
+}
+.imageButton{
+    height: 200px;
+    width: 200px;
+}
+.imageButton:hover{
+
+    transform: scale(1.1);
+}
+.vsImage{
+    height: 300px;
+    width: 300px;
+}
+
+body{
+    background-color: black ;
+}
+.background{
+    background-image: url("images/background.jpg");
+}
+#h1{
+    color: brown;
+    position: relative;
+    top:350px;
+    left:700px;
+}
+.computer1{
+    font-size: 40px;
+    text-align: right;
+    float: right;
+    padding-right: 300px;
+    top: 100px;
+    color: white;
+}
+.player1{
+    font-size: 40px;
+    text-align: left;
+    float: left;
+    padding-left : 200px;
+    top: 100px;
+    color: white;
+}
+.center{
+    position: absolute;
+    top: 250px;
+
+}
+.bottom{
+    position: absolute;
+    top: 675px;
+    left:500px
+}
+.result{
+    color: white;
+    font-size: 80px;
+    padding-left: 200px;
+
+}
