@@ -1,9 +1,5 @@
 #playButton{
-    
-    position: relative;
-    top: 400px;
-    left: 900px;
-    width: 100px;
+     width: 100px;
     height: 40px;
     background-color: thistle;
 }
@@ -26,16 +22,15 @@
 }
 
 body{
-    background-color: black ;
+    background-color: honeydew ;
+    display: table;
 }
 .background{
     background-image: url("images/background.jpg");
 }
 #h1{
     color: brown;
-    position: relative;
-    top:350px;
-    left:700px;
+    
 }
 .computer1{
     font-size: 40px;
@@ -68,4 +63,24 @@ body{
     font-size: 80px;
     padding-left: 200px;
 
+}
+#box{
+    display: table-cell;
+    justify-content: center;
+    vertical-align: middle;
+}
+#middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#middle-content{
+    display: flex;
+    flex-direction: column;
+    
+}
+#midButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
