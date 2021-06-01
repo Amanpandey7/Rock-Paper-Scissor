@@ -50,7 +50,7 @@ function choosePlay(par1,computer){
     console.log(playerScore);
 
     if(playerScore>=5 || computerScore >= 5){
-        const box = document.getElementById("box");
+        const box = document.getElementById("bottom-content");
       //  var par2 = box.firstChild;
       //  par2.innerHTML="";
         const result = document.createElement("div");
@@ -59,9 +59,9 @@ function choosePlay(par1,computer){
         result.textContent = "YOU WON";
         else
         result.textContent = "YOU LOST";
-        var par3 = box.lastChild;
-        par3.innerHTML = "";
-        par3.appendChild(result);
+        
+        box.innerHTML = "";
+        box.appendChild(result);
      //   par2.innerHTML = "";
       //  box.innerHTML ="";
         
@@ -74,8 +74,6 @@ function gameStart(e){
    // var player ="",computer;
 
     //setting the scoreboard
-    const box = document.getElementById("box");
-    box.classList.add("box");
     document.body.classList.add("background");
     const scoreBox = document.getElementById("top");
     const player1 = document.createElement("div");
@@ -91,18 +89,19 @@ function gameStart(e){
     //setting the playing field images here
     const currentPlay = document.getElementById("middle-content");
     currentPlay.innerHTML="";
-    currentPlay.classList.add("center");
-    box.appendChild(currentPlay);
+    currentPlay.style.flexDirection = "row";
+    currentPlay.style.justifyContent = "space-around";
+    
     const playerImage = document.createElement("img");
     //playerImage.classList.add();
     const computerImage = document.createElement("img");
     currentPlay.appendChild(playerImage);
     currentPlay.appendChild(computerImage);
-    computerImage.style.paddingLeft = "600px";
-    playerImage.style.paddingLeft = "300px";
+    computerImage.style.float = "right";
+    playerImage.style.float = "left";
 
     //this div will contain your choice
-    const yourPlay = document.createElement("div");
+    const yourPlay = document.getElementById("bottom-content");
 
     //rock image defined
     const rockImage = document.createElement("img");
@@ -169,8 +168,8 @@ function gameStart(e){
         
     });
 
-    yourPlay.classList.add("bottom");
-    box.appendChild(yourPlay);
+    
+    
 
     //starting the game
  //   var playerScore=0, computerScore=0;
