@@ -22,14 +22,15 @@
 }
 
 body{
-    background-color: honeydew ;
-    display: table;
+    background-color: black ;
+    height: 100%;
 }
 .background{
     background-image: url("images/background.jpg");
 }
 #h1{
     color: brown;
+    
     
 }
 .computer1{
@@ -65,22 +66,32 @@ body{
 
 }
 #box{
-    display: table-cell;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    vertical-align: middle;
+    height: 100%;
+    
 }
 #middle{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    height: 40%;
 }
 #middle-content{
     display: flex;
     flex-direction: column;
-    
+    justify-content:center;
 }
+
 #midButton{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+#top{
+    height: 30%;
+}
+#bottom{
+    height: 30%;
 }

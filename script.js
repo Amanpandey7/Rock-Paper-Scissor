@@ -76,9 +76,8 @@ function gameStart(e){
     //setting the scoreboard
     const box = document.getElementById("box");
     box.classList.add("box");
-    box.innerHTML = "";
     document.body.classList.add("background");
-    const scoreBox = document.createElement("div");
+    const scoreBox = document.getElementById("top");
     const player1 = document.createElement("div");
     player1.textContent= "Player :";
     player1.classList.add("player1")
@@ -87,10 +86,11 @@ function gameStart(e){
     computer1.classList.add("computer1");
     scoreBox.appendChild(player1);
     scoreBox.appendChild(computer1);
-    box.appendChild(scoreBox);
+    
 
     //setting the playing field images here
-    const currentPlay = document.createElement("div");
+    const currentPlay = document.getElementById("middle-content");
+    currentPlay.innerHTML="";
     currentPlay.classList.add("center");
     box.appendChild(currentPlay);
     const playerImage = document.createElement("img");
